@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Ferdinand TOKOU</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./portfolio.css">
+</head>
+<body>
+        <!--Header-->
+    <header>
+        <a href="" class="logo">Ferdinand.</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./services.html">Service</a>
+            <a href="./resume.html">Resume</a>
+            <a href="./portfolio.html" class="active">Portfolio</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <!--Header-->
+    <section class="portfolio active">
+        <h2 class="heading">Récentes <span>Aventures</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <div class="portfolio-detail active">
+                    <p class="numb">01</p>
+                    <h3>Serrure à Badge RFID</h3>
+                    <p>Conception d'une serrure à badge RFID à base d'arduino</p>
+                    <div class="tech">
+                        <p>Prototype Avec Arduino et Réalisation.</p>
+                    </div>
+                    <div class="live-github">
+                        <a href=""><i class="bx bx-arrow-back"></i><span>Projet</span></a>
+                        <a href=""><i class="bx bxl-github"></i><span>GitHub Repository</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">02</p>
+                    <h3>SYSTÈME EMBARQUÉ TEMPS RÉEL</h3>
+                    <p>Système informatique intégré garantissant des réponses dans un délai strict.</p>
+                    <div class="tech">
+                        <p>TIA Portal PLC.</p>
+                    </div>
+                    <div class="live-github">
+                        <a href=""><i class="bx bx-arrow-back"></i><span>Projet</span></a>
+                        <a href=""><i class="bx bxl-github"></i><span>GitHub Repository</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">03</p>
+                    <h3>Mise en place d’un système de détection d’intrusion (IDS)</h3>
+                    <p>Dispositif surveillant le réseau pour détecter et signaler les intrusions.</p>
+                    <div class="tech">
+                        <p>Magnétisme | Electronique</p>
+                    </div>
+                    <div class="live-github">
+                        <a href=""><i class="bx bx-arrow-back"></i><span>Projet</span></a>
+                        <a href=""><i class="bx bxl-github"></i><span>GitHub Repository</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">04</p>
+                    <h3>CHANE D'ACQUISITION ET DE COMMANDE</h3>
+                    <p>Ensemble traitant des données capteurs pour piloter des actionneurs physiques.</p>
+                    <div class="tech">
+                        <p>Step7 | Python | Arduino</p>
+                    </div>
+                    <div class="live-github">
+                        <a href=""><i class="bx bx-arrow-back"></i><span>Projet</span></a>
+                        <a href=""><i class="bx bxl-github"></i><span>GitHub Repository</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">05</p>
+                    <h3>Un générateur de motif à LED.</h3>
+                    <p>Circuit électronique générant des motifs lumineux variés avec des LED.</p>
+                    <div class="tech">
+                        <p>Electronique & Arduino</p>
+                    </div>
+                    <div class="live-github">
+                        <a href=""><i class="bx bx-arrow-back"></i><span>Projet</span></a>
+                        <a href=""><i class="bx bxl-github"></i><span>GitHub Repository</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <div class="portfolio-carousel">
+                    
+                    <div class="img-slide">
+                        <div class="img-item">
+                            <img src="./images/1.jpg" alt="">
+                        </div>
+                        <div class="img-item">
+                            <img src="./images/2.jpg" alt="">
+                        </div>
+                        <div class="img-item">
+                            <img src="./images/3.jpg" alt="">
+                        </div>
+                        <div class="img-item">
+                            <img src="./images/4.jpg" alt="">
+                        </div>
+                        <div class="img-item">
+                            <img src="./images/5.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="navigation">
+                        <button class="arrow-left disabled" onclick="left()"><i class="bx bx-chevron-left"></i></button>
+                        <button class="arrow-right" onclick="right()"><i class="bx bx-chevron-right"></i></button>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Custom with js-->
+    <script src="script.js"></script>
+</body>
+</html>
