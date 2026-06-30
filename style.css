@@ -250,10 +250,10 @@ section.home {
 
 .home-img .img-box .img-item img{
     position: absolute;
-    top: -15rem;
-    left: -7rem;
+    top: -8rem;
+    left: -5rem;
     display: block;
-    width: 49rem;
+    width: 42rem;
     object-fit: cover;
     mix-blend-mode: lighten;
 }
