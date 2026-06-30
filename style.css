@@ -250,12 +250,11 @@ section.home {
 
 .home-img .img-box .img-item img{
     position: absolute;
-    top: -8rem;
-    left: -5rem;
-    display: block;
-    width: 42rem;
-    object-fit: cover;
-    mix-blend-mode: lighten;
+    width: 95%;
+    height: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .services{
