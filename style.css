@@ -257,7 +257,7 @@ section.home {
 
 .home-img .img-box .img-item img{
     position: absolute;
-    top: -3rem;
+    top: 2rem;
     left: -7rem;
     display: block;
     width: 40rem;
