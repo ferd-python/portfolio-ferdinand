@@ -260,7 +260,7 @@ section.home {
     top: 2rem;
     left: -15rem;
     display: block;
-    width: 40rem;
+    width: 34rem;
     object-fit: cover;
     mix-blend-mode: lighten;
 }
