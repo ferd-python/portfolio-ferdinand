@@ -198,8 +198,8 @@ section.home {
 }
 
 .home-img {
-    margin-top: 8%;
-    margin-right: 5%;
+    margin-top: 15%;
+    margin-right: 7%;
 }
 
 .home-img .img-box {
@@ -257,8 +257,8 @@ section.home {
 
 .home-img .img-box .img-item img{
     position: absolute;
-    top: -8rem;
-    left: -5rem;
+    top: -5rem;
+    left: -3rem;
     display: block;
     width: 42rem;
     object-fit: cover;
