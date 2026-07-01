@@ -258,7 +258,7 @@ section.home {
 .home-img .img-box .img-item img{
     position: absolute;
     top: 2rem;
-    left: -7rem;
+    left: -15rem;
     display: block;
     width: 40rem;
     object-fit: cover;
