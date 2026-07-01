@@ -198,8 +198,8 @@ section.home {
 }
 
 .home-img {
-    margin-top: 15%;
-    margin-right: 7%;
+    margin-top: 6%;
+    margin-right: 4%;
 }
 
 .home-img .img-box {
@@ -218,8 +218,8 @@ section.home {
 .home-img .img-box::after {
     content: '';
     position: absolute;
-    width: 50rem;
-    height: 50rem;
+    width: 35vw;
+    height: 35vw;
     background: conic-gradient(transparent, transparent, transparent, var(--main-color));
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
