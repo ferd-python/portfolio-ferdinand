@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>CV - TOKOU Kodjo Ferdinand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+    :root{
+        --bg-dark: #071c29;
+        --sidebar-dark: #08202f;
+        --main-color: #17b98d;
+        --accent-warm: #e8993c;
+        --text-dark: #1c2b33;
+        --text-muted: #5b6b74;
+        --border-soft: #e4e8ea;
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+
+    @page{ size:210mm 297mm; margin:0; }
+
+    html,body{
+        width:210mm;
+        height:297mm;
+        font-family:'Lato', Arial, sans-serif;
+        color:var(--text-dark);
+        font-size:12.5px;
+        line-height:1.45;
+        -webkit-font-smoothing:antialiased;
+    }
+
+    .page{
+        width:210mm;
+        height:297mm;
+        display:flex;
+        overflow:hidden;
+    }
+
+    h1,h2,h3,.section-title{
+        font-family:'Montserrat', Arial, sans-serif;
+    }
+
+    /* ============ SIDEBAR ============ */
+    .sidebar{
+        width:70mm;
+        min-width:70mm;
+        background:var(--sidebar-dark);
+        color:#eaf1f4;
+        padding:9mm 8mm 9mm 9mm;
+        display:flex;
+        flex-direction:column;
+        gap:6.5mm;
+    }
+
+    .photo-box{
+        width:100%;
+        aspect-ratio: 4 / 5;
+        border-radius:3mm;
+        overflow:hidden;
+        background: linear-gradient(160deg, #0d2c3f, #061620);
+        border:0.6mm solid var(--accent-warm);
+        display:flex;
+        align-items:flex-start;
+        justify-content:center;
+    }
+    .photo-box img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position: 50% 12%;
+    }
+
+    .side-section .section-title{
+        font-size:11px;
+        font-weight:700;
+        letter-spacing:1.5px;
+        color:var(--accent-warm);
+        text-transform:uppercase;
+        margin-bottom:2.6mm;
+        padding-bottom:1.6mm;
+        border-bottom:0.4mm solid rgba(255,255,255,0.18);
+    }
+
+    .side-section ul{ list-style:none; display:flex; flex-direction:column; gap:1.8mm; }
+    .side-section ul li{ font-size:11.5px; line-height:1.4; word-break:break-word; }
+    .side-section ul li b{ display:block; color:#ffffff; font-weight:700; font-size:10.5px; letter-spacing:.3px; }
+
+    .chip-wrap{ display:flex; flex-wrap:wrap; gap:1.6mm; }
+    .chip{
+        font-size:10px;
+        font-weight:600;
+        padding:1.5mm 3mm;
+        border:0.35mm solid rgba(255,255,255,0.35);
+        border-radius:20px;
+        color:#eaf1f4;
+        white-space:nowrap;
+    }
+
+    .lang-row{ margin-bottom:2.4mm; }
+    .lang-row:last-child{ margin-bottom:0; }
+    .lang-top{ display:flex; justify-content:space-between; font-size:11px; margin-bottom:1.2mm; }
+    .lang-top span:last-child{ color:var(--main-color); font-weight:700; }
+    .lang-bar{ height:1.4mm; background:rgba(255,255,255,0.15); border-radius:2mm; overflow:hidden; }
+    .lang-bar i{ display:block; height:100%; background:var(--main-color); border-radius:2mm; }
+
+    .avail-line{ font-size:11.5px; font-weight:700; color:#fff; }
+    .avail-sub{ font-size:10.5px; color:#b9c6cc; margin-top:1mm; }
+
+    /* ============ MAIN ============ */
+    .main{
+        flex:1;
+        padding:10mm 12mm 8mm 11mm;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .name{
+        font-size:29px;
+        font-weight:800;
+        color:var(--text-dark);
+        letter-spacing:.2px;
+        line-height:1.1;
+    }
+    .name .accent{ color:var(--accent-warm); }
+
+    .role{
+        font-size:14px;
+        font-weight:700;
+        color:var(--main-color);
+        margin-top:1.6mm;
+    }
+
+    .tags{
+        font-size:10.8px;
+        color:var(--text-muted);
+        margin-top:1.8mm;
+        font-weight:600;
+    }
+
+    .hr{ height:0.35mm; background:var(--border-soft); margin:4mm 0 5mm; }
+
+    .section{ margin-bottom:3mm; }
+    .section:last-of-type{ margin-bottom:0; }
+
+    .section-head{
+        font-size:13px;
+        font-weight:700;
+        color:var(--text-dark);
+        letter-spacing:.6px;
+        text-transform:uppercase;
+        margin-bottom:2.2mm;
+        position:relative;
+        padding-left:4mm;
+    }
+    .section-head::before{
+        content:"";
+        position:absolute;
+        left:0; top:1.2mm;
+        width:2mm; height:2mm;
+        background:var(--main-color);
+        border-radius:1px;
+    }
+
+    .profil-text{ font-size:11.8px; color:#33454e; line-height:1.42; text-align:justify; }
+
+    .item{ margin-bottom:2mm; padding-left:4mm; border-left:0.5mm solid var(--border-soft); position:relative; }
+    .item:last-child{ margin-bottom:0; }
+    .item::before{
+        content:"";
+        position:absolute;
+        left:-1.15mm; top:1.3mm;
+        width:2mm; height:2mm;
+        border-radius:50%;
+        background:var(--accent-warm);
+    }
+    .item-title{ font-size:12.3px; font-weight:700; color:var(--text-dark); }
+    .item-title .item-meta{ font-weight:600; color:var(--main-color); font-size:11px; }
+    .item-desc{ font-size:11.2px; color:#4c5c64; margin-top:0.8mm; }
+
+    .edu-row{ display:flex; justify-content:space-between; align-items:baseline; gap:3mm; margin-bottom:2mm; }
+    .edu-row:last-child{ margin-bottom:0; }
+    .edu-left b{ display:block; font-size:12.3px; font-weight:700; color:var(--text-dark); }
+    .edu-left span{ font-size:11px; color:var(--text-muted); }
+    .edu-right{ font-size:11px; font-weight:700; color:var(--main-color); white-space:nowrap; text-align:right; }
+
+    .services-grid{ display:grid; grid-template-columns:1fr 1fr; gap:2mm 6mm; }
+    .services-grid div{ font-size:11.3px; color:#33454e; padding-left:3.6mm; position:relative; }
+    .services-grid div::before{ content:"—"; position:absolute; left:0; color:var(--accent-warm); font-weight:700; }
+
+    .cta-box{
+        margin-top:3mm;
+    }
+    .cta-inner{
+        background:#fbf2e4;
+        border:0.35mm solid #f0dcb4;
+        border-radius:2.4mm;
+        padding:2.2mm 5mm;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:4mm;
+    }
+    .cta-inner b{ font-size:12px; color:var(--text-dark); display:block; }
+    .cta-inner span{ font-size:10.8px; color:#6a5628; }
+
+    .footer-line{
+        margin-top:3.5mm;
+        padding-top:2.6mm;
+        border-top:0.35mm solid var(--border-soft);
+        display:flex;
+        justify-content:space-between;
+        font-size:10px;
+        color:var(--text-muted);
+    }
+    .footer-line b{ color:var(--main-color); }
+</style>
+</head>
+<body>
+<div class="page">
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <div class="sidebar">
+        <div class="photo-box">
+            <img src="../images/ferdinand.png" alt="Photo de TOKOU Kodjo Ferdinand">
+        </div>
+
+        <div class="side-section">
+            <div class="section-title">Contact</div>
+            <ul>
+                <li>Lomé, Togo</li>
+                <li>+228 98 87 98 59</li>
+                <li>kodjo.tokou.etu@esig.tg</li>
+                <li>github.com/ferd-python</li>
+                <li>ferd-python.github.io/portfolio-ferdinand</li>
+            </ul>
+        </div>
+
+        <div class="side-section">
+            <div class="section-title">Compétences</div>
+            <div class="chip-wrap">
+                <span class="chip">TIA Portal</span>
+                <span class="chip">Ladder / GRAFCET</span>
+                <span class="chip">SCADA / IHM</span>
+                <span class="chip">Vision Industrielle</span>
+                <span class="chip">Arduino</span>
+                <span class="chip">Cisco Packet Tracer</span>
+                <span class="chip">Python / FastAPI</span>
+                <span class="chip">Automatisation IA (n8n)</span>
+                <span class="chip">Docker</span>
+                <span class="chip">SQL / PostgreSQL</span>
+                <span class="chip">HTML / CSS / JS</span>
+                <span class="chip">Git / GitHub</span>
+            </div>
+        </div>
+
+        <div class="side-section">
+            <div class="section-title">Langues</div>
+            <div class="lang-row">
+                <div class="lang-top"><span>Français</span><span>Maternel</span></div>
+                <div class="lang-bar"><i style="width:100%"></i></div>
+            </div>
+            <div class="lang-row">
+                <div class="lang-top"><span>Anglais</span><span>Intermédiaire</span></div>
+                <div class="lang-bar"><i style="width:60%"></i></div>
+            </div>
+        </div>
+
+        <div class="side-section">
+            <div class="section-title">Atouts</div>
+            <ul>
+                <li>Rigueur & sens du résultat</li>
+                <li>Esprit d'analyse et d'initiative</li>
+                <li>Leadership (Président Bureau des Délégués)</li>
+                <li>Travail d'équipe & communication</li>
+                <li>Adaptabilité</li>
+            </ul>
+        </div>
+
+        <div class="side-section">
+            <div class="section-title">Disponibilité</div>
+            <div class="avail-line">Stage · Alternance · Freelance</div>
+            <div class="avail-sub">Togo · Afrique · International</div>
+        </div>
+    </div>
+
+    <!-- ===================== MAIN ===================== -->
+    <div class="main">
+        <div class="name">TOKOU Kodjo <span class="accent">Ferdinand</span></div>
+        <div class="role">Automaticien & Développeur Full-Stack</div>
+        <div class="tags">Automatismes Industriels · Vision Industrielle · Développement Web · Automatisation IA</div>
+        <div class="hr"></div>
+
+        <div class="section">
+            <div class="section-head">Profil</div>
+            <p class="profil-text">
+                Étudiant en Licence Informatique Industrielle à ESIG Global Success (Lomé), spécialisé en automatismes
+                industriels : programmation d'automates (Ladder, GRAFCET, TIA Portal), supervision SCADA/IHM et vision
+                industrielle. Complète cette base technique par le développement web et l'automatisation par l'IA
+                (Python, FastAPI, n8n). Fort d'une expérience de leadership étudiant confirmée — Président du Bureau
+                du Collège des Délégués et Délégué Général — habitué à conjuguer rigueur technique et gestion d'équipe.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-head">Projets & Réalisations</div>
+            <div class="item">
+                <div class="item-title">Robotique & Vision Industrielle <span class="item-meta">— SAEII601, ESIG</span></div>
+                <div class="item-desc">Exposé technique et intégration d'outils communicants (RLI, IO-Link, OPC UA) sur système automatisé, jumeau numérique.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Système de Production Automatisé <span class="item-meta">— SAE 301/302, ESIG</span></div>
+                <div class="item-desc">Conception, programmation (Ladder, GRAFCET, TIA Portal) et supervision SCADA d'une ligne automatisée.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Serrure à Badge RFID <span class="item-meta">— Projet certifié, Direction Générale ESIG</span></div>
+                <div class="item-desc">Conception et réalisation d'une serrure à badge RFID à base d'Arduino, du prototype à la réalisation.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Automatisation IA WhatsApp <span class="item-meta">— Projet personnel</span></div>
+                <div class="item-desc">Agent vendeur IA sur WhatsApp Cloud API (GPT/Claude, n8n) : gestion des commandes, relances et CRM automatisés.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">228 Code Challenge <span class="item-meta">— Concours national</span></div>
+                <div class="item-desc">Participation au concours togolais de programmation avec un projet en C++.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-head">Responsabilités Étudiantes</div>
+            <div class="edu-row">
+                <div class="edu-left">
+                    <b>Conseil Général — Bureau du Collège des Délégués</b>
+                    <span>ESIG Global Success, Lomé</span>
+                </div>
+                <div class="edu-right">2025 – 2026</div>
+            </div>
+            <div class="edu-row">
+                <div class="edu-left">
+                    <b>Président du Bureau du Collège des Délégués & Délégué Général</b>
+                    <span>Ziga Global SOSES · ESIG Global Success, Lomé</span>
+                </div>
+                <div class="edu-right">2024 – 2025</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-head">Formation</div>
+            <div class="edu-row">
+                <div class="edu-left"><b>Informatique Industrielle — ESIG Global Success</b><span>Lomé, Togo</span></div>
+                <div class="edu-right">Depuis 2023<br>Licence 3 en cours</div>
+            </div>
+            <div class="edu-row">
+                <div class="edu-left"><b>Génie Mécanique — Université de Lomé</b><span>Lomé, Togo</span></div>
+                <div class="edu-right">2020 – 2022</div>
+            </div>
+            <div class="edu-row">
+                <div class="edu-left"><b>Baccalauréat série E (Maths & Techniques)</b><span>LETP-L, Adidogomé</span></div>
+                <div class="edu-right">2020</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-head">Services</div>
+            <div class="services-grid">
+                <div>Automatismes & supervision SCADA</div>
+                <div>IoT & vision industrielle</div>
+                <div>Développement web</div>
+                <div>Automatisation IA (WhatsApp, n8n)</div>
+                <div>Maintenance prédictive</div>
+                <div>Gestion de projet agile</div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <div class="cta-inner">
+                <div>
+                    <b>Un projet d'automatisme ou de digitalisation ?</b>
+                    <span>kodjo.tokou.etu@esig.tg · +228 98 87 98 59</span>
+                </div>
+            </div>
+            <div class="footer-line">
+                <span>Rigueur industrielle. Agilité digitale.</span>
+                <b>ferd-python.github.io/portfolio-ferdinand</b>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
