@@ -48,28 +48,23 @@
         min-width:70mm;
         background:var(--sidebar-dark);
         color:#eaf1f4;
-        padding:9mm 8mm 9mm 9mm;
+        padding:7mm 8mm 5mm 9mm;
         display:flex;
         flex-direction:column;
-        gap:6.5mm;
+        gap:3.2mm;
     }
 
     .photo-box{
-        width:100%;
-        aspect-ratio: 4 / 5;
-        border-radius:3mm;
-        overflow:hidden;
-        background: linear-gradient(160deg, #0d2c3f, #061620);
-        border:0.6mm solid var(--accent-warm);
+        width:calc(100% + 6mm);
+        margin:0 -3mm;
         display:flex;
         align-items:flex-start;
         justify-content:center;
     }
     .photo-box img{
         width:100%;
-        height:100%;
-        object-fit:cover;
-        object-position: 50% 12%;
+        height:auto;
+        display:block;
     }
 
     .side-section .section-title{
