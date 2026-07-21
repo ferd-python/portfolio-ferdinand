@@ -57,16 +57,16 @@ const activePortfolio = () =>{
 }
 
 function right(){
-  if(index < 4){
+  if(index < 5){
     index++;
     arrowRight.classList.remove('disabled')
   }
   else{
-    index=4;
+    index=5;
     arrowRight.classList.add('disabled')
   }
   activePortfolio()
-  
+
 }
 function left(){
   if(index > 1){
