@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Ferdinand TOKOU</title>
+    <title>Contact | Ferdinand TOKOU</title>
+    <meta name="description" content="Contacter TOKOU Kodjo Ferdinand pour vos projets d'automatisme industriel, de développement web ou d'automatisation IA.">
+    <meta name="theme-color" content="#051824">
     <link rel="icon" href="./shutter.png" type="image/png" color="#60CCEC">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
 </head>
 <body>
         <!--Header-->
     <header>
-        <a href="" class="logo">Ferdinand TK</a>
+        <a href="./index.html" class="logo">Ferdinand TK</a>
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav>
@@ -38,14 +37,14 @@
                     <i class="fa-solid fa-phone-volume"></i>
                     <div class="detail">
                         <p>Phone</p>
-                        <p>(+228)98 87 98 59</p>
+                        <p><a href="tel:+22898879859">(+228) 98 87 98 59</a></p>
                     </div>
                 </div>
                 <div class="contact-detail">
                     <i class="fa-solid fa-envelope"></i>
                     <div class="detail">
                         <p>Email</p>
-                        <p>kodjo.tokou.etu@esig.tg</p>
+                        <p><a href="mailto:kodjo.tokou.etu@esig.tg">kodjo.tokou.etu@esig.tg</a></p>
                     </div>
                 </div>
                 <div class="contact-detail">
@@ -59,14 +58,18 @@
                     <i class="fa-brands fa-whatsapp"></i>
                     <div class="detail">
                         <p>Whatsapp</p>
-                        <p>(+228)98 87 98 59</p>
+                        <p><a href="https://wa.me/22898879859" target="_blank" rel="noopener">(+228) 98 87 98 59</a></p>
                     </div>
                 </div>
             </div>
 
             <div class="contact-box">
-                <form action="" id="contact-form">
+                <form action="https://formsubmit.co/kodjo.tokou.etu@esig.tg" method="POST" id="contact-form">
                     <h2 class="heading">Contact <span>Me !</span></h2>
+                    <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://ferd-python.github.io/portfolio-ferdinand/contact.html?sent=1">
                     <div class="field-box">
                         <input type="text" id="name" name="name"  placeholder="Full name" required>
                         <input type="text" id="subject" name="subject"  placeholder="Email Subject" required>
@@ -77,9 +80,8 @@
             </div>
         </div>
     </section>
-    
+
     <!--Custom with js-->
-    </script>
     <script src="script.js"></script>
 </body>
-</htm
+</html>

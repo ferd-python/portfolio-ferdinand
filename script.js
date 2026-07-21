@@ -24,27 +24,17 @@ resumeBtns.forEach( (btn, idx) => {
 })
 
 
-//sendMail
-function SendBtn(){
-console.log("CLICK DETECTED");
-
-  let parms = {
-    name : document.getElementById("name").value,
-    subject : document.getElementById("subject").value,
-    message : document.getElementById("message").value,
-  }
-
-  const form = document.getElementById("contact-form");
-
-  emailjs.send("service_bum5aow", "template_21ljtu3", parms)
-  .then(function() {
-    alert("Message envoyé avec succès !");
-    form.reset();
-  })
-  .catch(function(error) {
-    alert("Erreur : " + error.text);
-  });
-};
+//contact form success feedback (FormSubmit.co redirects back with ?sent=1)
+const contactForm = document.getElementById("contact-form");
+if (contactForm && new URLSearchParams(window.location.search).get("sent") === "1") {
+  const notice = document.createElement("p");
+  notice.textContent = "Message envoyé avec succès, merci !";
+  notice.style.color = "var(--main-color)";
+  notice.style.marginBottom = "1.5rem";
+  notice.style.fontSize = "1.6rem";
+  contactForm.prepend(notice);
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
 
 
 /*carrousel portfolio*/

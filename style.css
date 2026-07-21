@@ -14,6 +14,7 @@
     --bg-color: #051824;
     --second-bg-color: #3b5265;
     --main-color: #27e9b5;
+    --accent-warm: #ffb454;
     --white-color: #eaeaea;
     --disabled-color: #fff3;
 }
@@ -23,8 +24,14 @@ html{
 }
 body{
     height: 100vh;
+    height: 100dvh;
     color: var(--white-color);
     background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
 }
 header{
     position: fixed;
@@ -246,6 +253,7 @@ section.home {
         transparent,
         transparent,
         transparent,
+        var(--accent-warm),
         var(--main-color)
     );
 
@@ -325,6 +333,7 @@ section.home {
 }
 
 .services-container .services-box {
+    position: relative;
     animation: show-servicesContent 1s linear forwards;
     transition-delay: 0.5s;
     padding: 3rem 2.5rem;
@@ -360,11 +369,13 @@ section.home {
 }
 
 .services-box .icon a {
+    position: absolute;
+    top: 3rem;
+    right: 2.5rem;
     display: inline-flex;
     background: var(--white-color);
     border-radius: 50%;
     padding: .2rem;
-    margin-left: 20rem;
     transition: .5s;
 }
 
@@ -649,14 +660,18 @@ section.contact{
         gap: 3rem;
     }
 
+    section.contact{
+        height: auto;
+        min-height: 100%;
+        align-items: flex-start;
+        padding-top: 12rem;
+        padding-bottom: 4rem;
+    }
+
     .portfolio-container .portfolio-box:first-child{
         order: 1;
     }
 
-    .contact-container{
-        position: relative;
-        top: 60%;
-    }
     .container-box .field-box{
         grid-template-columns: repeat(2, 1fr);
     }
