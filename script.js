@@ -79,3 +79,18 @@ function left(){
   }
   activePortfolio()
 }
+
+/*session tabs (portfolio académique S1-S6)*/
+const sessionTabs = document.querySelectorAll('.session-tab');
+
+sessionTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const sessionPanels = document.querySelectorAll('.session-panel');
+
+    sessionTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    sessionPanels.forEach(panel => panel.classList.remove('active'));
+    document.getElementById(tab.dataset.target).classList.add('active');
+  });
+});
