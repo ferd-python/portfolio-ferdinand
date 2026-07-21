@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
 
 *{
     margin: 0;
@@ -7,7 +7,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    font-family: "Poppins", sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 :root{
@@ -47,9 +47,10 @@ header{
 }
 
 .logo{
+    font-family: "IBM Plex Mono", monospace;
     font-size: 3rem;
     color: var(--white-color);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 nav a{
@@ -109,6 +110,7 @@ section.home {
 
 .home-detail h1 {
     font-size: clamp(3.5rem, 10vw, 5.5rem);
+    font-weight: 700;
 }
 
 .home-detail h2 {
@@ -118,6 +120,7 @@ section.home {
 }
 
 .home-detail h2 span {
+    font-family: "IBM Plex Mono", monospace;
     position: relative;
     display: inline-block;
     color: transparent;
